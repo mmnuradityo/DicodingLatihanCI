@@ -9,7 +9,7 @@ workflows:
           XCODE_PROJECT: "TriangleApp.xcodeproj" # Isikan nama project Anda.
           XCODE_SCHEME: "TriangleApp" # Isikan nama scheme project Anda.
       ios_signing:
-          bundle_identifier: "$BUNDLE_ID" # replace with your app bundle
+          bundle_identifier: com.aditya.dicoding.TriangleApp # replace with your app bundle
     scripts:
       - name: Run tests
         script: |
