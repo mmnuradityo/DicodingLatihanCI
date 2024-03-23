@@ -11,7 +11,7 @@ workflows:
     scripts:
       - name: Run tests
         script: |
-          xcodebuild \
+          xcodebuild test \
           -project "$XCODE_PROJECT" \
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
@@ -19,7 +19,8 @@ workflows:
           clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       - name: Build debug app
         script: |
-          xcodebuild build -project "$XCODE_PROJECT" \
+          xcodebuild build \
+          -project "$XCODE_PROJECT" \
           -scheme "$XCODE_SCHEME" \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     artifacts:
