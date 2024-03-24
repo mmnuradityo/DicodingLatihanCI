@@ -16,10 +16,6 @@ setup_travis
 
 default_platform(:ios)
 
-before_all do
-  xcversion(version: "14")
-end
-
 platform :ios do
   lane :unit_test do
     run_tests(scheme: "TriangleApp")

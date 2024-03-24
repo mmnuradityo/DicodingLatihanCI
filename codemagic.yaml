@@ -15,7 +15,7 @@ workflows:
         script: |
           gem install bundler:3.0.0
           bundle install
-          bundle exec fastlane beta
+          bundle exec fastlane ios unit_test
       - name: Build debug app
         script: |
           xcodebuild build \
