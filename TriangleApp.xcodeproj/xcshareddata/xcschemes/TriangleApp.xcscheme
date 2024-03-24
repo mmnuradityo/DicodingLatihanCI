@@ -20,6 +20,20 @@
                ReferencedContainer = "container:TriangleApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "84D7B13F2BA2BEDC0095CC9F"
+               BuildableName = "TriangleAppTests.xctest"
+               BlueprintName = "TriangleAppTests"
+               ReferencedContainer = "container:TriangleApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
