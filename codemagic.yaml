@@ -11,12 +11,6 @@ workflows:
           XCODE_PROJECT: "TriangleApp.xcodeproj" # Isikan nama project Anda.
           XCODE_SCHEME: "TriangleApp" # Isikan nama scheme project Anda.
     scripts:
-      - name: Install Fastlane plugins
-        script: |
-          cd fastlane     # change to ios/android folder as required
-          bundle add fastlane-plugin-s3
-          bundle add fastlane-plugin-dropbox
-    scripts:
       - name: Run fastlane
         script: |
           bundle install
