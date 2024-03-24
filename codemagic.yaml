@@ -17,7 +17,7 @@ workflows:
             --project "$XCODE_PROJECT" \
             --scheme "$XCODE_SCHEME" \
             --device "iPhone 11" \
-            --test-xcargs "CODE_SIGNING_ALLOWED=NO" "CODE_SIGNING_REQUIRED=NO" "CODE_SIGNING_ALLOWED=NO"
+            --test-xcargs "CODE_SIGNING_ALLOWED=NO"
         test_report: build/ios/test/*.xml
       - name: Build debug app
         script: |
