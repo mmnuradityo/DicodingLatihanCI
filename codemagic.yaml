@@ -11,12 +11,14 @@ workflows:
     scripts:
       - name: Run tests
         script: |
-          xcodebuild \
-          -project "$XCODE_PROJECT" \
-          -scheme "$XCODE_SCHEME" \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
-          clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          #!/bin/sh
+          set -ex
+          xcode-project run-tests \
+            --project "$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME" \
+            --device "iPhone 11" \
+            --test-xcargs "CODE_SIGNING_ALLOWED=NO" "CODE_SIGNING_REQUIRED=NO" "CODE_SIGNING_ALLOWED=NO"
+        test_report: build/ios/test/*.xml
       - name: Build debug app
         script: |
           xcodebuild build \
